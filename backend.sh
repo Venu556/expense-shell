@@ -75,7 +75,7 @@ VALIDATE $? "Installing MySQL client"
 mysql -h mysql.devopsaws56.online -uroot -pExpenseApp@1 < /app/schema/backend.sql &>>$LOG_FILE
 VALIDATE $? "Schema loading"
 
-systemctl daemon-reload -y &>>$LOG_FILE
+systemctl daemon-reload  &>>$LOG_FILE
 VALIDATE $? "Daemon reload"
 
 systemctl enable backend &>>$LOG_FILE
